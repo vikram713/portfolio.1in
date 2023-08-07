@@ -1,0 +1,159 @@
+.n-wrapper {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.n-left {
+    color: salmon;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.n-left>:nth-child(1) {
+    border-bottom: 5px solid black;
+}
+
+.n-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.n-right {
+    border: 0px solid black;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: center;
+    padding: 2rem;
+}
+
+.n-list {
+    display: flex;
+    border: 0px solid black;
+    flex: 10;
+}
+
+.n-list>ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+a {
+    display: block;
+}
+
+.n-list>ul>li {
+    font-size: 1.0rem;
+    font-weight: bold;
+    transition: all 0.9s ease-in-out;
+}
+
+.n-list>ul>li:hover {
+    border-bottom: 4px solid orange;
+    cursor: pointer;
+    color: orange;
+}
+
+.n-list>ul>li>a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: orange;
+}
+
+.button {
+    border-radius: 34px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    background: linear-gradient(yellow, orange);
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+}
+
+.button:hover {
+    background: white;
+    cursor: pointer;
+    border: 1px solid orange;
+    color: orange;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    left: 100%;
+}
+
+.open {
+    display: flex;
+}
+
+@media(max-width:778px) {
+    .hamburger {
+        font-size: 1.3rem;
+        position: relative;
+        top: -108px;
+        left: 360px;
+        display: flex;
+    }
+    .menu {
+        display: flex;
+    }
+    .n-wrapper {
+        transform: scale(0.87);
+        height: 220px;
+        flex-direction: column;
+    }
+    .n-list>ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+        position: fixed;
+        right: -650px;
+        background-color: black;
+        color: white;
+        top: 100px;
+        padding: 40px 0px 0px 20px;
+    }
+    .i-left {
+        left: -11%;
+        width: 431px;
+    }
+    .n-right {
+        height: 159px;
+    }
+    .n-list>ul>li {
+        position: relative;
+        top: 2px;
+    }
+    .n-list>ul>li:hover {
+        color: orange;
+    }
+    .button {
+        display: none;
+        width: 59px;
+        left: -137px;
+        position: relative;
+        font-size: 10px;
+        height: 38px;
+    }
+    #navbar.open {
+        right: -200px;
+        padding: 20px;
+    }
+    .n-left {
+        background-color: gray;
+    }
+}
